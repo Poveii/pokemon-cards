@@ -1,0 +1,159 @@
+/* ====== IMPORTING FILES CSS ====== */
+@import "./reset.css";
+@import "./responsive.css";
+
+/* ====== LAYOUT ====== */
+body {
+  font-family: "Outfit", sans-serif;
+
+  background-image: url(../images/fundo-site.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+}
+
+/* ====== HEADER ====== */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  padding-top: 50px;
+}
+
+.heading .pokeball {
+  width: 25px;
+  height: 25px;
+}
+
+.heading .title {
+  color: #f1ecff;
+}
+
+/* ====== MAIN ====== */
+.pokemon-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  margin: 60px 0;
+}
+
+.pokemons {
+  width: 310px;
+  height: 520px;
+
+  position: relative;
+}
+
+.arrow-button {
+  width: 70px;
+  height: 70px;
+
+  background-color: #f1ecff;
+  border: #f1ecff;
+  border-radius: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.arrow-button:hover {
+  background-color: #8351fe;
+}
+
+.arrow-button.back-button {
+  transform: rotateY(180deg);
+}
+
+.card {
+  opacity: 0;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card.selected {
+  opacity: 1;
+  z-index: 1;
+}
+
+.background-1 {
+  background: url(../images/fundo-card-1.jpg) no-repeat;
+}
+
+.background-2 {
+  background: url(../images/fundo-card-2.jpg) no-repeat;
+}
+
+.background-3 {
+  background: url(../images/fundo-card-3.jpg) no-repeat;
+}
+
+.card .pokemon {
+  background-color: rgba(179, 177, 185, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card .pokemon .pokemon-name {
+  color: #f1ecff;
+  font-size: 22px;
+}
+
+.card .pokemon .pokemon-health {
+  background-color: #333333;
+  color: #f1ecff;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+.card .pokemon-image {
+  text-align: center;
+}
+
+.card .pokemon-image img {
+  max-width: 100%;
+  max-height: 280px;
+  padding: 20px;
+}
+
+.card .description {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card .description .subtitle {
+  background-color: #333333;
+  color: #f1ecff;
+
+  font-size: 15px;
+  padding: 12px;
+}
+
+.card .description .text {
+  font-size: 14px;
+  text-align: justify;
+
+  max-height: 115px;
+  padding: 12px;
+  overflow-y: auto;
+}

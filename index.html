@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Slider Project - MapaDev Week</title>
+
+    <!------ Favicon ------>
+    <link
+      rel="shortcut icon"
+      href="./src/images/pokebola.png"
+      type="image/x-icon"
+    />
+
+    <!------ Importing Fonts ------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+
+    <!------ Importing CSS ------>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
+  <body>
+    <header class="heading">
+      <img
+        src="./src/images/pokebola.png"
+        alt="a pokeball icon"
+        class="pokeball"
+      />
+      <h1 class="title">MapaDev Week</h1>
+    </header>
+
+    <main class="pokemon-slider">
+      <button class="arrow-button back-button" id="backward-button">
+        <img src="./src/images/seta.png" alt="an arrow left" />
+      </button>
+
+      <ul class="pokemons">
+        <li class="card background-1 selected">
+          <div class="pokemon">
+            <h1 class="pokemon-name">Pikachu</h1>
+            <p class="pokemon-health">HP 300</p>
+          </div>
+          <div class="pokemon-image">
+            <img src="./src/images/pikachu.png" alt="Pikachu Pokemon" />
+          </div>
+          <div class="description">
+            <h3 class="subtitle">Description</h3>
+            <p class="text">
+              Os Pikachus são pequenos roedores de quarenta centímetros e de
+              seis quilogramas, com um corpo redondo, pernas curtas e uma longa
+              cauda, quando macho, a cauda tem um formato de um raio, mas se o
+              Pikachu for fêmea sua cauda ganha um coração na ponta.
+            </p>
+          </div>
+        </li>
+        <li class="card background-2">
+          <div class="pokemon">
+            <h1 class="pokemon-name">Charizard</h1>
+            <p class="pokemon-health">HP 300</p>
+          </div>
+          <div class="pokemon-image">
+            <img src="./src/images/charizard.png" alt="Charizard Pokemon" />
+          </div>
+          <div class="description">
+            <h3 class="subtitle">Description</h3>
+            <p class="text">
+              Geralmente, um Charizard é competitivo. Ele adora a batalha e seu
+              espírito competitivo também é notável, uma vez que nunca vai
+              cuspir fogo em um inimigo mais fraco a menos que provocado ou
+              ordenado. Quando fica muito irritado, as chamas em sua cauda se
+              tornam branco-azuladas.
+            </p>
+          </div>
+        </li>
+        <li class="card background-3">
+          <div class="pokemon">
+            <h1 class="pokemon-name">Mewtwo</h1>
+            <p class="pokemon-health">HP 300</p>
+          </div>
+          <div class="pokemon-image">
+            <img src="./src/images/mewtwo.png" alt="Mewtwo Pokemon" />
+          </div>
+          <div class="description">
+            <h3 class="subtitle">Description</h3>
+            <p class="text">
+              Mewtwo foi criado geneticamente em um laboratório, sendo um clone
+              do misterioso antigo Pokémon Mew. É uma criatura com uma postura
+              humanoide, mas tem algumas características felinas.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <button class="arrow-button" id="forward-button">
+        <img src="./src/images/seta.png" alt="an arrow right" />
+      </button>
+    </main>
+
+    <!------ Importing Javascript ------>
+    <script src="./src/scripts/index.js"></script>
+  </body>
+</html>
