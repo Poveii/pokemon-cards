@@ -157,3 +157,17 @@ body {
   padding: 12px;
   overflow-y: auto;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+  color: #f1ecff;
+  margin-bottom: 30px;
+}
+
+footer small a {
+  color: #f1ecff;
+  font-weight: bold;
+}
