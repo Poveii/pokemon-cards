@@ -1,11 +1,13 @@
 <div align=center>
-  <img src="" alt="Showing up Pokemon Cards on gif" />
+  <img src="https://user-images.githubusercontent.com/79858234/184463251-85b000a9-efbf-40b3-a972-e062914719ea.gif" alt="Showing up Pokemon Cards on gif" />
 </div>
 
 # Pokemon Cards
-A simple Pokemon cards slider!
+🕹️ 📕 A simple Pokemon cards slider!
 
-<strong><a href="https://poveii.github.io/pokemon-cards/">→ See here the project</a></strong>
+<strong>
+  <a href="https://poveii.github.io/pokemon-cards/">→ See here the project</a>
+</strong>
 
 ## Features
 - [ ] Modify card design and think forward in API connection
