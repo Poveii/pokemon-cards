@@ -1,30 +1,30 @@
 <div align=center>
-  <img src="https://user-images.githubusercontent.com/79858234/184463251-85b000a9-efbf-40b3-a972-e062914719ea.gif" alt="Showing up Pokemon Cards on gif" />
+  <img src="https://user-images.githubusercontent.com/79858234/184463251-85b000a9-efbf-40b3-a972-e062914719ea.gif" alt="Gif mostrando o site do Pokemon Cards" />
 </div>
 
 # Pokemon Cards
-🕹️ 📕 A simple Pokemon cards slider!
+🕹️ 📕 Um slider simples de cartas Pokémon
 
 <strong>
-  <a href="https://poveii.github.io/pokemon-cards/">→ See here the project</a>
+  <a href="https://poveii.github.io/pokemon-cards/">→ Veja aqui o projeto</a>
 </strong>
 
-## Features
-- [ ] Modify card design and think forward in API connection
-- [ ] Connection with an API to make a Pokemons infinite slider (or infinite card generator)
+## Funcionalidades
+- [ ] Modificar o design das cartas e pensar depois em uma conexão com uma API de Pokémons
+- [ ] Fazer um slider infinito de cartas Pokémons com a API (ou um generador de cartas infinito)
 
-## Tecnologies
+## Tecnologias
 - <strong>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Icon" style="width: 18px;" /> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Ícone do HTML5" style="width: 18px;" /> 
       HTML
   </strong>
 - <strong>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Icon" style="width: 18px;" /> 
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Ícone do CSS3" style="width: 18px;" /> 
       CSS
   </strong>
 - <strong>
-     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Javascript Icon" style="width: 16px;" /> 
+     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Ícone do Javascript" style="width: 16px;" /> 
       Javascript
   </strong>
 
-### ❤️ Thanks to Dev em Dobro (Beto and Cadu Dias) that presented this project on Mapadev Week.
+### ❤️ Obrigado ao Dev em Dobro (Beto e Cadu Dias) que apresentaram e fizeram esse projeto na Mapadev Week.
