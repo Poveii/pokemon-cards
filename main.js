@@ -3,14 +3,25 @@ function randomNumberGenerator(array) {
 }
 
 let randomNumber = randomNumberGenerator(905);
+// console.log(randomNumber);
 
 backwardButton.addEventListener("click", () => {
+  if (randomNumber <= 1) {
+    randomNumber = 905;
+    setPokemonCard();
+    return;
+  }
   randomNumber--;
 
   setPokemonCard();
 });
 
 forwardButton.addEventListener("click", () => {
+  if (randomNumber >= 905) {
+    randomNumber = 1;
+    setPokemonCard();
+    return;
+  }
   randomNumber++;
 
   setPokemonCard();
@@ -55,6 +66,8 @@ function setPokemonCard() {
     .then((response) => response.json())
     .then((pokemon) => {
       // console.log(pokemon);
+
+      pokemonImage.classList.remove("opacity");
 
       randomNumberToBackground = neverReturnZero(randomNumberToBackground);
 
