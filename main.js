@@ -3,7 +3,6 @@ function randomNumberGenerator(array) {
 }
 
 let randomNumber = randomNumberGenerator(905);
-console.log(randomNumber);
 
 backwardButton.addEventListener("click", () => {
   randomNumber--;
@@ -23,26 +22,26 @@ function neverReturnZero(number) {
 }
 
 const pokemonTypesList = [
-  { name: "Normal", color: "#000000" },
-  { name: "Fighting", color: "#414338" },
-  { name: "Flying", color: "#B7E0E1" },
-  { name: "Poison", color: "#3EA923" },
-  { name: "Ground", color: "#7B6251" },
-  { name: "Rock", color: "#868683" },
-  { name: "Bug", color: "#09CE3A" },
-  { name: "Ghost", color: "#8D809D" },
-  { name: "Steel", color: "#564E4D" },
-  { name: "Fire", color: "#F42815" },
-  { name: "Water", color: "#8AE5BC" },
-  { name: "Grass", color: "#A6CC3E" },
-  { name: "Electric", color: "#FFDA1F" },
-  { name: "Psychic", color: "#AB73A6" },
+  { name: "Normal", color: "#000000", textColor: "#FFFFFF" },
+  { name: "Fighting", color: "#414338", textColor: "#FFFFFF" },
+  { name: "Flying", color: "#B7E0E1", textColor: "#FFFFFF" },
+  { name: "Poison", color: "#3EA923", textColor: "#FFFFFF" },
+  { name: "Ground", color: "#7B6251", textColor: "#FFFFFF" },
+  { name: "Rock", color: "#868683", textColor: "#FFFFFF" },
+  { name: "Bug", color: "#09CE3A", textColor: "#FFFFFF" },
+  { name: "Ghost", color: "#8D809D", textColor: "#FFFFFF" },
+  { name: "Steel", color: "#564E4D", textColor: "#FFFFFF" },
+  { name: "Fire", color: "#F42815", textColor: "#FFFFFF" },
+  { name: "Water", color: "#79E2B3", textColor: "#FFFFFF" },
+  { name: "Grass", color: "#A6CC3E", textColor: "#FFFFFF" },
+  { name: "Electric", color: "#EECB1B", textColor: "#FFFFFF" },
+  { name: "Psychic", color: "#AB73A6", textColor: "#FFFFFF" },
   { name: "Ice", color: "#F7F3F5", textColor: "#000000" },
-  { name: "Dragon", color: "#E00F00" },
-  { name: "Dark", color: "#0D2430" },
-  { name: "Fairy", color: "#5FBF62" },
-  { name: "Unknown", color: "#887880" },
-  { name: "Shadow", color: "#281525" },
+  { name: "Dragon", color: "#E00F00", textColor: "#FFFFFF" },
+  { name: "Dark", color: "#0D2430", textColor: "#FFFFFF" },
+  { name: "Fairy", color: "#5FBF62", textColor: "#FFFFFF" },
+  { name: "Unknown", color: "#887880", textColor: "#FFFFFF" },
+  { name: "Shadow", color: "#281525", textColor: "#FFFFFF" },
 ];
 
 function setPokemonCard() {
@@ -77,8 +76,7 @@ function setPokemonCard() {
 
         typeColor.style.backgroundColor = type.color;
 
-        if (type.textColor == "#000000")
-          pokemonType.style.color = type.textColor;
+        pokemonType.style.color = type.textColor;
         return;
       });
 

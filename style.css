@@ -107,6 +107,10 @@ main {
 }
 
 .card .pokemon {
+  flex: 2;
+}
+
+.pokemon .pokemon-info {
   background-color: rgba(179, 177, 185, 0.7);
 
   display: flex;
@@ -118,11 +122,11 @@ main {
   border-top-right-radius: 10px;
 }
 
-.pokemon h2 {
+.pokemon-info h2 {
   font-size: 1.375rem;
 }
 
-.pokemon p {
+.pokemon-info p {
   background-color: #333333;
 
   min-width: 64px;
@@ -132,7 +136,7 @@ main {
   border-radius: 20px;
 }
 
-.card .pokemon-type {
+.pokemon .pokemon-type {
   background-color: #333333;
   padding: 6px 0px;
 }
@@ -241,12 +245,12 @@ footer small a {
     height: 560px;
   }
 
-  .pokemon h2 {
+  .pokemon-info h2 {
     max-width: 50%;
     font-size: 1.125rem;
   }
 
-  .pokemon p {
+  .pokemon-info p {
     font-size: 0.875rem;
   }
 
