@@ -22,6 +22,29 @@ function neverReturnZero(number) {
   return number;
 }
 
+const pokemonTypesList = [
+  { name: "Normal", color: "#000000" },
+  { name: "Fighting", color: "#414338" },
+  { name: "Flying", color: "#B7E0E1" },
+  { name: "Poison", color: "#3EA923" },
+  { name: "Ground", color: "#7B6251" },
+  { name: "Rock", color: "#868683" },
+  { name: "Bug", color: "#09CE3A" },
+  { name: "Ghost", color: "#8D809D" },
+  { name: "Steel", color: "#564E4D" },
+  { name: "Fire", color: "#F42815" },
+  { name: "Water", color: "#8AE5BC" },
+  { name: "Grass", color: "#A6CC3E" },
+  { name: "Electric", color: "#FFDA1F" },
+  { name: "Psychic", color: "#AB73A6" },
+  { name: "Ice", color: "#F7F3F5", textColor: "#000000" },
+  { name: "Dragon", color: "#E00F00" },
+  { name: "Dark", color: "#0D2430" },
+  { name: "Fairy", color: "#5FBF62" },
+  { name: "Unknown", color: "#887880" },
+  { name: "Shadow", color: "#281525" },
+];
+
 function setPokemonCard() {
   let randomNumberToBackground = randomNumberGenerator(5);
 
@@ -32,7 +55,7 @@ function setPokemonCard() {
   fetch(url)
     .then((response) => response.json())
     .then((pokemon) => {
-      console.log(pokemon);
+      // console.log(pokemon);
 
       randomNumberToBackground = neverReturnZero(randomNumberToBackground);
 
@@ -48,6 +71,16 @@ function setPokemonCard() {
       pokemonType.textContent =
         pokemon.types[0].type.name[0].toUpperCase() +
         pokemon.types[0].type.name.substring(1);
+
+      pokemonTypesList.forEach((type) => {
+        if (type.name != pokemonType.textContent) return;
+
+        typeColor.style.backgroundColor = type.color;
+
+        if (type.textColor == "#000000")
+          pokemonType.style.color = type.textColor;
+        return;
+      });
 
       pokemonAbility.textContent =
         pokemon.abilities[0].ability.name[0].toUpperCase() +
