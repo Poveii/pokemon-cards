@@ -80,6 +80,8 @@ function setPokemonCard() {
 
       pokemonHealth.textContent = pokemon.stats[0].base_stat;
 
+      pokemonIdentity.textContent = randomNumber;
+
       pokemonType.textContent =
         pokemon.types[0].type.name[0].toUpperCase() +
         pokemon.types[0].type.name.substring(1);
