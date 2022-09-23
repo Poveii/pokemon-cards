@@ -2,12 +2,12 @@ function randomNumberGenerator(array) {
   return Math.floor(Math.random() * array);
 }
 
-let randomNumber = randomNumberGenerator(905);
+let randomNumber = randomNumberGenerator(906);
 // console.log(randomNumber);
 
 backwardButton.addEventListener("click", () => {
   if (randomNumber <= 1) {
-    randomNumber = 905;
+    randomNumber = 906;
     setPokemonCard();
     return;
   }
@@ -17,12 +17,18 @@ backwardButton.addEventListener("click", () => {
 });
 
 forwardButton.addEventListener("click", () => {
-  if (randomNumber >= 905) {
+  if (randomNumber >= 906) {
     randomNumber = 1;
     setPokemonCard();
     return;
   }
   randomNumber++;
+
+  setPokemonCard();
+});
+
+refreshButton.addEventListener("click", () => {
+  randomNumber = randomNumberGenerator(906);
 
   setPokemonCard();
 });
