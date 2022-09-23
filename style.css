@@ -132,12 +132,12 @@ main {
   border-radius: 20px;
 }
 
-.card .type {
+.card .pokemon-type {
   background-color: #333333;
   padding: 6px 0px;
 }
 
-.type h3 {
+.pokemon-type h3 {
   font-size: 0.9375rem;
   text-align: center;
 }

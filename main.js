@@ -1,29 +1,42 @@
 function randomNumberGenerator(array) {
-  return Math.floor(Math.random(1) * array);
+  return Math.floor(Math.random() * array);
 }
 
 let randomNumber = randomNumberGenerator(905);
 console.log(randomNumber);
 
-backwardButton.addEventListener("click", function () {
+backwardButton.addEventListener("click", () => {
   randomNumber--;
 
   setPokemonCard();
 });
 
-forwardButton.addEventListener("click", function () {
+forwardButton.addEventListener("click", () => {
   randomNumber++;
 
   setPokemonCard();
 });
 
+function neverReturnZero(number) {
+  if (number == 0) number++;
+  return number;
+}
+
 function setPokemonCard() {
+  let randomNumberToBackground = randomNumberGenerator(5);
+
+  randomNumber = neverReturnZero(randomNumber);
+
   const url = `https://pokeapi.co/api/v2/pokemon/${randomNumber}`;
 
   fetch(url)
     .then((response) => response.json())
     .then((pokemon) => {
-      // console.log(pokemon);
+      console.log(pokemon);
+
+      randomNumberToBackground = neverReturnZero(randomNumberToBackground);
+
+      pokemonBackground.className = `card background-${randomNumberToBackground}`;
 
       pokemonImage.src = pokemon.sprites.other.home.front_default;
 
