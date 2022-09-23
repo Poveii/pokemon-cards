@@ -38,67 +38,47 @@
     </header>
 
     <main>
-      <button class="arrow-button back-button" id="backward-button">
+      <button class="arrow-button back-button" id="backwardButton">
         <img src="./images/arrow.png" alt="Uma seta apontando pra esquerda" />
       </button>
 
-      <ul class="pokemons">
-        <li class="card background-1 selected">
+      <div class="pokemons">
+        <div class="card background-1 selected">
           <div class="pokemon">
-            <h1 class="pokemon-name">Pikachu</h1>
-            <p class="pokemon-health">HP 300</p>
+            <h1 id="pokemonName">???????</h1>
+            <p>HP <span id="pokemonHealth">??</span></p>
           </div>
-          <div class="pokemon-image">
-            <img src="./images/pikachu.png" alt="O Pokémon Pikachu" />
-          </div>
-          <div class="description">
-            <h3 class="subtitle">Description</h3>
-            <p class="text">
-              Pikachus are small rodents measuring forty centimeters and six
-              kilograms, with a round body, short legs and a long tail, when
-              male, the tail is shaped like a lightning bolt, but if Pikachu is
-              female, its tail has a heart on the tip.
-            </p>
-          </div>
-        </li>
-        <li class="card background-2">
-          <div class="pokemon">
-            <h1 class="pokemon-name">Charizard</h1>
-            <p class="pokemon-health">HP 300</p>
-          </div>
-          <div class="pokemon-image">
-            <img src="./images/charizard.png" alt="O Pokémon Charizard" />
-          </div>
-          <div class="description">
-            <h3 class="subtitle">Description</h3>
-            <p class="text">
-              Generally, a Charizard is competitive. He loves battle and his
-              competitive spirit is also notable, as he will never breathe fire
-              at a weaker enemy unless provoked or ordered. When he gets too
-              angry, the flames on his tail turn bluish-white.
-            </p>
-          </div>
-        </li>
-        <li class="card background-3">
-          <div class="pokemon">
-            <h1 class="pokemon-name">Mewtwo</h1>
-            <p class="pokemon-health">HP 300</p>
-          </div>
-          <div class="pokemon-image">
-            <img src="./images/mewtwo.png" alt="O Pokémon Mewtwo" />
-          </div>
-          <div class="description">
-            <h3 class="subtitle">Description</h3>
-            <p class="text">
-              Mewtwo was genetically created in a laboratory, being a clone of
-              the mysterious ancient Pokemon Mew. It is a creature with a
-              humanoid posture, but it has some feline characteristics.
-            </p>
-          </div>
-        </li>
-      </ul>
 
-      <button class="arrow-button" id="forward-button">
+          <div class="pokemon-image">
+            <img src="" alt="O Pokémon ???????" id="pokemonImage" />
+          </div>
+
+          <div class="description">
+            <div class="type">
+              <h3 id="pokemonType">????????</h3>
+            </div>
+
+            <div class="ability">
+              <h3 id="pokemonAbility">??????</h3>
+              <p id="abilityText">
+                ???????? ? ???? ????? ??????? ???? ???? ???????? ??? ?????? ????
+                ??? ? ??? ?????? ?? ????? ????????????????? ???? ??? ?????? ??
+                ????????????? ????? ??? ????? ?? ????????? ?? ???? ????????
+                ?????????? ?? ??? ???? ??????? ??? ???? ???????? ????? ?? ? ???
+                ?????? ???? ?????????? ???? ?? ???? ?? ???????? ???????? ??
+                ???????????
+              </p>
+            </div>
+
+            <div class="move">
+              <h3 id="pokemonMove">??????????</h3>
+              <p id="moveText">???????? ??????? ???????</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrow-button" id="forwardButton">
         <img src="./images/arrow.png" alt="Uma seta apontando pra direita" />
       </button>
     </main>
