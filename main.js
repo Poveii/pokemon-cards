@@ -73,29 +73,3 @@ function setPokemonCard() {
 }
 
 setPokemonCard();
-
-/*
-const text = "Inflicts regular damage.";
-
-function changeEveryLetter(text) {
-  const letters = text.split("");
-
-  // console.log(letters);
-
-  const newArray = [];
-
-  letters.forEach((letter) => {
-    if (letter == " ") return newArray.push(" ");
-
-    newArray.push("?");
-  });
-
-  // console.log(newArray);
-
-  const newText = newArray.join("");
-
-  console.log(newText);
-}
-
-changeEveryLetter(text);
-*/

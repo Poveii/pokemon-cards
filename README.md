@@ -3,6 +3,7 @@
 </div>
 
 # Pokemon Cards
+
 🕹️ 📕 Um slider simples de cartas Pokémon
 
 <strong>
@@ -10,10 +11,13 @@
 </strong>
 
 ## Funcionalidades
-- [ ] Modificar o design das cartas e pensar depois em uma conexão com uma API de Pokémons
-- [ ] Fazer um slider infinito de cartas Pokémons com a API (ou um generador de cartas infinito)
+
+- [x] Modificar o design das cartas para algo legal
+- [ ] Conectar a PokeAPI para ter mais cartas de Pokémons
+- [ ] Fazer um slider infinito de cartas Pokémons (ou um generador de cartas infinito, ou os dois)
 
 ## Tecnologias
+
 - <strong>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Ícone do HTML5" style="width: 18px;" /> 
       HTML

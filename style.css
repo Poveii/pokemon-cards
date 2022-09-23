@@ -31,7 +31,7 @@ header {
   justify-content: center;
   column-gap: 15px;
 
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 header img {
@@ -46,7 +46,7 @@ main {
   justify-content: center;
   column-gap: 80px;
 
-  margin: 60px 0px;
+  margin: 50px 0px;
 }
 
 .pokemons {
@@ -78,8 +78,6 @@ main {
 }
 
 .card {
-  opacity: 1;
-
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -104,6 +102,10 @@ main {
   background: url(./images/background-card-3.jpg) no-repeat;
 }
 
+.background-4 {
+  background: url(./images/background-card-4.jpg) no-repeat;
+}
+
 .card .pokemon {
   background-color: rgba(179, 177, 185, 0.7);
 
@@ -116,28 +118,40 @@ main {
   border-top-right-radius: 10px;
 }
 
-.pokemon h1 {
+.pokemon h2 {
   font-size: 1.375rem;
 }
 
 .pokemon p {
   background-color: #333333;
 
+  min-width: 64px;
+  text-align: center;
+
   padding: 6px 10px;
   border-radius: 20px;
 }
 
+.card .type {
+  background-color: #333333;
+  padding: 6px 0px;
+}
+
+.type h3 {
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
 .card .pokemon-image {
   text-align: center;
+  flex: 1;
 }
 
 .pokemon-image img {
   max-width: 100%;
-  max-height: 280px;
-  padding: 20px 0px;
+  height: 280px;
 
   opacity: 0;
-
   animation: whoThisPokemon 0.4s 1.6s backwards ease-out;
 }
 
@@ -147,20 +161,16 @@ main {
 
 .card .description {
   background-color: rgba(255, 255, 255, 0.8);
+
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .description h3 {
   font-size: 0.9375rem;
-  padding: 8px;
-}
 
-.type h3 {
-  background-color: #333333;
-
-  text-align: center;
-  padding: 6px;
+  padding: 4px 8px;
+  padding-right: 0px;
 }
 
 .ability h3 {
@@ -176,8 +186,8 @@ main {
   text-align: justify;
   color: #000000;
 
-  max-height: 42px;
-  padding: 8px;
+  max-height: 40px;
+  padding: 6px 8px;
   overflow-y: auto;
 }
 
@@ -187,7 +197,7 @@ footer {
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 footer small {
@@ -207,7 +217,6 @@ footer small a {
 
   to {
     filter: brightness(1);
-    opacity: 1;
   }
 }
 
@@ -232,7 +241,7 @@ footer small a {
     height: 560px;
   }
 
-  .pokemon h1 {
+  .pokemon h2 {
     max-width: 50%;
     font-size: 1.125rem;
   }
