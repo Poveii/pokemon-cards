@@ -14,7 +14,7 @@
 
 - [x] Modificar o design das cartas para algo legal
 - [x] Conectar a PokeAPI para ter mais cartas de Pokémons
-- [ ] Fazer um slider infinito de cartas Pokémons (ou um generador de cartas infinito, ou os dois)
+- [x] Fazer um slider infinito de cartas Pokémons (ou um generador de cartas infinito, ou os dois)
 
 ## Tecnologias
 
