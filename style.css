@@ -59,7 +59,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 80px;
 }
 
 .pokemons {
@@ -79,11 +78,12 @@ main {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 8px 30px 0px;
 
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .arrow-button:hover {
   background-color: #8351fe;
+  color: #f1eeff;
 }
 
 .card {
@@ -101,22 +101,22 @@ main {
 
 .background-1 {
   background: url(./images/background-card-1.jpg) no-repeat;
+  background-size: cover;
 }
 
 .background-2 {
   background: url(./images/background-card-2.jpg) no-repeat;
+  background-size: cover;
 }
 
 .background-3 {
   background: url(./images/background-card-3.jpg) no-repeat;
+  background-size: cover;
 }
 
 .background-4 {
   background: url(./images/background-card-4.jpg) no-repeat;
-}
-
-.card .pokemon {
-  flex: 2;
+  background-size: cover;
 }
 
 .pokemon .pokemon-info {
@@ -156,7 +156,9 @@ main {
 }
 
 .card .pokemon-image {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
 
@@ -204,6 +206,11 @@ main {
   overflow-y: auto;
 }
 
+.buttons {
+  display: flex;
+  column-gap: 32px;
+}
+
 /* ====== FOOTER ====== */
 footer {
   display: flex;
@@ -234,36 +241,38 @@ footer small a {
 }
 
 /* ====== MEDIA QUERIES ====== */
-@media (max-width: 620px) {
-  main {
-    padding: 0 15px;
-    column-gap: 10px;
+@media (min-width: 425px) {
+  .buttons {
+    column-gap: 40px;
   }
+}
 
+@media (min-width: 768px) {
+  .container {
+    column-gap: 70px;
+  }
+}
+
+@media (min-width: 1440px) {
   .arrow-button {
-    width: 20px;
-    height: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    width: 86px;
+    height: 86px;
   }
 
   .pokemons {
-    height: 560px;
+    width: 372px;
+    height: 624px;
   }
 
-  .pokemon-info h2 {
-    max-width: 50%;
-    font-size: 1.125rem;
+  .pokemon-info {
+    padding: 10px 12px;
   }
 
-  .pokemon-info p {
-    font-size: 0.875rem;
+  .pokemon-type {
+    padding: 8px 0px;
   }
 
-  .card .pokemon-image {
-    max-height: 230px;
+  .description p {
+    max-height: 60px;
   }
 }

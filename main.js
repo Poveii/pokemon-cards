@@ -1,3 +1,20 @@
+function moveButtonsToCenter() {
+  if (window.outerWidth <= 425) {
+    const forwardClone = forwardButton.cloneNode(true);
+    const backwardClone = backwardButton.cloneNode(true);
+
+    const buttonsDiv = document.querySelector(".buttons");
+
+    buttonsDiv.insertBefore(backwardClone, refreshButton);
+    buttonsDiv.appendChild(forwardClone);
+
+    document.querySelector("#forwardButton").remove();
+    document.querySelector("#backwardButton").remove();
+  }
+}
+
+moveButtonsToCenter();
+
 const limit = 905;
 
 function randomNumberGenerator(array) {
