@@ -61,7 +61,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
       const lastPokemonIdentity = pokemonIdentity.textContent;
 
       if (lastPokemonIdentity <= 1) {
-        randomNumber = limit;
+        randomNumber = limit - 1;
         setPokemonCard(data.results[randomNumber].url);
         return;
       }
@@ -74,7 +74,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
       const lastPokemonIdentity = pokemonIdentity.textContent;
 
       if (lastPokemonIdentity >= limit) {
-        randomNumber = 1;
+        randomNumber = 0;
         setPokemonCard(data.results[randomNumber].url);
         return;
       }
@@ -112,6 +112,11 @@ fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
 
           pokemonImage.src = pokemon.sprites.other.home.front_default;
 
+          if (pokemonImage.src == document.URL + null) {
+            pokemonImage.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
+            console.log("aaaaaaaa");
+          }
+
           pokemonName.textContent =
             pokemon.name[0].toUpperCase() + pokemon.name.substring(1);
 
@@ -132,37 +137,48 @@ fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
             return;
           });
 
-          pokemonAbility.textContent =
-            pokemon.abilities[0].ability.name[0].toUpperCase() +
-            pokemon.abilities[0].ability.name.substring(1);
+          try {
+            pokemonAbility.textContent =
+              pokemon.abilities[0].ability.name[0].toUpperCase() +
+              pokemon.abilities[0].ability.name.substring(1);
 
-          fetch(pokemon.abilities[0].ability.url)
-            .then((response) => response.json())
-            .then((ability) => {
-              // console.log(ability);
+            fetch(pokemon.abilities[0].ability.url)
+              .then((response) => response.json())
+              .then((ability) => {
+                // console.log(ability);
 
-              ability.effect_entries.forEach((item) => {
-                if (item.language.name != "en") return;
+                ability.effect_entries.forEach((item) => {
+                  if (item.language.name != "en") return;
 
-                abilityText.textContent = item.effect;
+                  abilityText.textContent = item.effect;
+                });
               });
-            });
+          } catch (err) {
+            pokemonAbility.textContent = "??????";
+            abilityText.textContent =
+              "???????? ? ???? ????? ??????? ???? ???? ???????? ??? ?????? ???? ??? ? ??? ?????? ?? ????? ?????????? ??????? ???? ??? ?????? ?? ????????????? ????? ??? ????? ?? ????????? ?? ???? ???????? ?????????? ?? ??? ???? ??????? ??? ???? ???????? ????? ?? ? ??? ?????? ???? ?????????? ???? ?? ???? ?? ???????? ???????? ?? ???????????";
+          }
 
-          pokemonMove.textContent =
-            pokemon.moves[0].move.name[0].toUpperCase() +
-            pokemon.moves[0].move.name.substring(1);
+          try {
+            pokemonMove.textContent =
+              pokemon.moves[0].move.name[0].toUpperCase() +
+              pokemon.moves[0].move.name.substring(1);
 
-          fetch(pokemon.moves[0].move.url)
-            .then((response) => response.json())
-            .then((move) => {
-              // console.log(move);
+            fetch(pokemon.moves[0].move.url)
+              .then((response) => response.json())
+              .then((move) => {
+                // console.log(move);
 
-              move.effect_entries.forEach((item) => {
-                if (item.language.name != "en") return;
+                move.effect_entries.forEach((item) => {
+                  if (item.language.name != "en") return;
 
-                moveText.textContent = item.effect;
+                  moveText.textContent = item.effect;
+                });
               });
-            });
+          } catch (err) {
+            pokemonMove.textContent = "??????????";
+            moveText.textContent = "???????? ??????? ???????";
+          }
 
           setTimeout(() => {
             pokemonImage.classList.add("opacity");
