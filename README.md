@@ -1,5 +1,5 @@
 <div align=center>
-  <img src="https://user-images.githubusercontent.com/79858234/184463251-85b000a9-efbf-40b3-a972-e062914719ea.gif" alt="Gif mostrando o site do Pokemon Cards" />
+  <img src="https://user-images.githubusercontent.com/79858234/192372350-e95e0e84-daf5-4acd-8194-1069ab4f9803.gif" alt="Gif mostrando o site do Pokemon Cards" />
 </div>
 
 # Pokemon Cards
