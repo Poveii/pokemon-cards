@@ -24,11 +24,6 @@ body {
   min-height: 100vh;
 }
 
-.material-icons-round {
-  font-weight: 700;
-  font-size: 1.875rem;
-}
-
 /* ====== HEADER ====== */
 header {
   display: flex;
@@ -66,13 +61,6 @@ main {
   justify-content: center;
 }
 
-.pokemons {
-  width: 310px;
-  height: 520px;
-
-  position: relative;
-}
-
 .arrow-button {
   width: 70px;
   height: 70px;
@@ -91,6 +79,18 @@ main {
   color: #f1eeff;
 }
 
+.arrow-button .material-icons-round {
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+
+.pokemons {
+  width: 310px;
+  height: 520px;
+
+  position: relative;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -100,38 +100,42 @@ main {
   padding: 12px;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 8px 30px 0px;
+
   transition: opacity 0.3s ease-in-out;
   animation: fromBottom 0.4s 0.2s backwards;
 }
 
 .background-1 {
-  background: url(./images/background-card-1.jpg) no-repeat;
+  background: url(./images/background-card-1.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-2 {
-  background: url(./images/background-card-2.jpg) no-repeat;
+  background: url(./images/background-card-2.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-3 {
-  background: url(./images/background-card-3.jpg) no-repeat;
+  background: url(./images/background-card-3.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .background-4 {
-  background: url(./images/background-card-4.jpg) no-repeat;
+  background: url(./images/background-card-4.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pokemon .pokemon-info {
-  background-color: rgba(179, 177, 185, 0.7);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8px 10px;
 
+  background-color: rgba(179, 177, 185, 0.7);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -141,12 +145,11 @@ main {
 }
 
 .pokemon-info p {
-  background-color: #333333;
-
   min-width: 64px;
+  padding: 6px 10px;
   text-align: center;
 
-  padding: 6px 10px;
+  background-color: #333333;
   border-radius: 20px;
 }
 
