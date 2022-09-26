@@ -104,6 +104,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
           // console.log(pokemon);
 
           pokemonImage.classList.remove("opacity");
+          pokemonImage.classList.remove("animation");
 
           randomNumberToBackground = neverReturnZero(randomNumberToBackground);
 
@@ -163,7 +164,10 @@ fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}`)
               });
             });
 
-          pokemonImage.classList.add("opacity");
+          setTimeout(() => {
+            pokemonImage.classList.add("opacity");
+            pokemonImage.classList.add("animation");
+          }, 400);
         });
     }
 
